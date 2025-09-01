@@ -4,12 +4,30 @@ See problemset-01.pdf for details.
 """
 # no imports needed.
 
-def foo(x):
+def foo(a,b):
     ### TODO
+    if a==0:
+        return b
+    elif b==0:
+        return a
+    else:
+        x,y = min(a,b),max(a,b)
+        return foo(y, y%x) 
     pass
 
 def longest_run(mylist, key):
     ### TODO
+    count_n = 0
+    count_max = 0
+    for v in mylist:
+        if v == key:
+            count_n+=1
+            count_max = max(count_n,count_max)
+        else:
+            count_n = 0
+    return count_max
+
+  
     pass
 
 
@@ -36,5 +54,6 @@ def longest_run_recursive(mylist, key):
 ## Feel free to add your own tests here.
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
+
 
 
