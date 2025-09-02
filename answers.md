@@ -50,7 +50,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
   x,y = min(a,b), max(a,b) : O(1) \\
   return foo(y, y%x) : O(1) \\
   The recursive step should be $O(\log min(a,b))$ times, so the total work is : \\
-  w(foo()) = $4 * O(\log min(a,b)) + O(1) = O(\log min(a,b)) = O(\log n)$ \\
+  w(foo()) = $4 * O(\log min(a,b)) * O(\log min(a,b))+1 = O(\log min(a,b)) = O(\log n)$ \\
   Since foo() is serial, then span would be same as work:\\
   s(foo()) =  $O(\log n)$ 
   
@@ -72,7 +72,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
   - 3d
   I use tree structure with a divide of 2. So the work would be total number of nodes, and span would be length of longest path.\\
-  w(longest_run_recursive()) = O(n) \\
+  w(longest_run_recursive()) = 2x w(n/2)+1 = O(n)\\
   s(longest_run_recursive()) = O($\log{2} n$) = O($\log n$) \\ 
 
   - 3e
