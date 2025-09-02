@@ -50,9 +50,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
   x,y = min(a,b), max(a,b) : O(1) \\
   return foo(y, y%x) : O(1) \\
   The recursive step should be $O(\log min(a,b))$ times, so the total work is : \\
-  w(foo()) = $4 * O(\log min(a,b)) + O(1) = O(\log min(a,b))$ \\
+  w(foo()) = $4 * O(\log min(a,b)) + O(1) = O(\log min(a,b)) = O(\log n)$ \\
   Since foo() is serial, then span would be same as work:\\
-  s(foo()) =   $O(\log min(a,b))$ 
+  s(foo()) =  $O(\log n)$ 
   
 
 
